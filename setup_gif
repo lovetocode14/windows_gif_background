@@ -4,16 +4,21 @@ from PIL import Image
 import time
 import ctypes
 
-path = "C:/Users/w0nde/OneDrive/Documents/hack_grounds/razr/"
+# path to the folder your gif is located in 
+path = ""
 
-file = "1.mp4"
+# name of gif
 gif_file = "razr.gif"
+
+# do not change this unless you want to change other things in the script
+file = "1.mp4"
+
 
 
 # gif to video
 
-clip = mp.VideoFileClip(path + "razr.gif")
-clip.write_videofile("C:\\Users\\w0nde\\OneDrive\\Documents\\hack_grounds\\razr\\1.mp4")
+clip = mp.VideoFileClip(path + gif_file)
+clip.write_videofile(path + file)
 
 video_path = path + file
 save_path = path
