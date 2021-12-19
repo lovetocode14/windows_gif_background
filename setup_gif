@@ -8,7 +8,7 @@ import ctypes
 path = ""
 
 # name of gif
-gif_file = "razr.gif"
+gif_file = ""
 
 # do not change this unless you want to change other things in the script
 file = "1.mp4"
