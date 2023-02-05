@@ -4,7 +4,7 @@
 ![computer](https://user-images.githubusercontent.com/82523141/216819498-940427e3-a52a-4d53-95d4-441dac7d2924.gif)
 
 
-# 🖥API
+# 🏻 API
 
 CPU and RAM usage can be heavy for gifs with lots of frames or high frame rates. I would recommend pausing script when you're gaming, heavy computing, etc. 
 
