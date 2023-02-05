@@ -4,7 +4,7 @@
 ![computer](https://user-images.githubusercontent.com/82523141/216819498-940427e3-a52a-4d53-95d4-441dac7d2924.gif)
 
 
-# 🏻 How to Use? 
+#🤔 How to Use? 
 
 Setup
   Download Repo
