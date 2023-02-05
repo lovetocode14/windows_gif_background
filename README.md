@@ -1,7 +1,8 @@
 # 🖥️ windows_gif_background
 
 
-![computer](https://user-images.githubusercontent.com/82523141/216819498-940427e3-a52a-4d53-95d4-441dac7d2924.gif)
+![wallpaper](https://user-images.githubusercontent.com/82523141/216833073-152e5190-d81c-4bde-a70c-c0f402364acc.gif)
+
 
 # 🤔 How to Use? 
 
