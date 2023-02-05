@@ -1,87 +1,38 @@
 import moviepy.editor as mp
 import cv2
-from PIL import Image
-import time
-import ctypes
+import os
 
-# path to the folder your gif is located in 
-path = ""
+file = "computer.gif"
+# path to the folder we are saving frames to
+path = os.path.join(os.getcwd(), 'temp\\')
 
-# name of gif
-gif_file = ""
+# path to gif
+gif_path = os.path.join(os.getcwd(), 'gifs\\', file)
 
 # do not change this unless you want to change other things in the script
-file = "1.mp4"
+video_file = "1.mp4"
 
 
+# gif to videoclip
+clip = mp.VideoFileClip(os.path.join(gif_path))
+clip.write_videofile(os.path.join(path, video_file))
 
-# gif to video
+video_path = os.path.join(path, video_file)
 
-clip = mp.VideoFileClip(path + gif_file)
-clip.write_videofile(path + file)
-
-video_path = path + file
-save_path = path
-
-# video to frames
-def length_of_video(video_path):
+def extract_frames():
+    # get frame_count
     cap = cv2.VideoCapture(video_path)
-    length=int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    print(str(length))
-    return length
+    frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
-
-
-
-length = length_of_video(video_path)
-
-
-def extract_frames(video_path, save_path):
+    # now extract frames
     cap = cv2.VideoCapture(video_path)
     count = 1
-    ret = True
-
-    for x in range(length):
-        save = save_path + str(x) + ".jpg"
+    for x in range(frame_count):
+        save = path + str(x) + ".jpg"
         ret, frame = cap.read()
         cv2.imwrite(save, frame)
         count += 1
 
+    return frame_count, round(clip.duration / frame_count, 2)
 
-extract_frames(video_path, save_path)
-
-
-# get average duration, frames
-
-
-def get_frames_and_duration(path):
-    im = Image.open(path)
-    frames = 1
-    try:
-        while 1:
-            im.seek(im.tell() + 1)
-            frames += 1
-    except EOFError:
-        pass  # end of sequence
-
-    print("Number of frames: " + str(frames))
-
-    im.seek(0)  # move to the start of the gif, frame 0
-    tot_duration = 0
-
-    for x in range(frames):
-        im.seek(x)
-        frame_duration = im.info['duration']
-
-        print(str(x) + ": " + str(frame_duration))
-        tot_duration += frame_duration
-
-    print("Duration of gif: " + str(tot_duration))
-    print("Average duration: " + str(tot_duration/frames))
-    info = [frames, tot_duration/frames]
-    return info
-
-
-info = get_frames_and_duration(path + gif_file)
-print(info[0])
-print(info[1])
+extract_frames()
