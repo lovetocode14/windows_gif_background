@@ -18,16 +18,16 @@ Setup
     python3 --version  
     pip --version  
     python3 -m venv  
-  Open a terminal or cmd and navigate to project dir
-    source/bin/activate (Linux)
-    venv/scripts/activate (Windows) 
-    pip install -r requirements.txt (I've included the requirements.txt for the project) 
-    
-   Now the fun stuff!
+  Open a terminal or cmd and navigate to project dir  
+    source/bin/activate (Linux)  
+    venv/scripts/activate (Windows)  
+    pip install -r requirements.txt (I've included the requirements.txt for the project)  
+      
+   Now the fun stuff!  
     I will emulate the directory structure in Github
-    Basically in project dir, have a temp and gifs folder
-    in setup.py, change the file to the specific gif you want to use (include it in gif folder) 
-    Thats it! Once you've modified setup.py to your gif (included in gifs/) just run.py
+    Basically in project dir, have a temp and gifs folder  
+    in setup.py, change the file to the specific gif you want to use (include it in gif folder)  
+    Thats it! Once you've modified setup.py to your gif (included in gifs/) just run.py  
   
 # ⚡ A Word of Caution
   
