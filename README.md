@@ -12,8 +12,8 @@ https://user-images.githubusercontent.com/82523141/217468382-71e6630d-e0c0-49d0-
 
 # 🤔 How to Use? 
 
-Setup
-  Download Repo
+Setup  
+  Download Repo  
   Make sure you have python3, pip, and venv installed. If you're not sure,  
     python3 --version  
     pip --version  
